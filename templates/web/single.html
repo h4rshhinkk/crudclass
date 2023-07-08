@@ -15,7 +15,9 @@
           <p class="card-text">Author : {{post.author}}</p>
           <p class="card-text">Post Updated on{{post.updated}}</p>
           <p class="card-text">Post Published on{{post.published}}</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          
+          <a href="{% url 'web:edit' post.pk %}" class="btn btn-success">Edit</a>
+          <a href="{% url 'web:delete' post.pk %}" class="btn btn-danger">Delete</a>
         </div>
       </div>
 
