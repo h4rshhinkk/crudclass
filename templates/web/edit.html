@@ -4,10 +4,11 @@
 {% block content %}
 
 <div class="container pt-5" >
-<h2>Add New Post Here >> </h2>
-</div>
+    <h2>Edit Post Here >>> </h2>
+    </div>
+    
 
-<div class="container pt-5">
+<div class="container pt-5 pb-5">
     <form method="POST" novalidate>
         {% csrf_token %}
         {% for field in form.visible_fields %}  
@@ -22,8 +23,8 @@
 
         </div>
        {% endfor %}
-       <div class="form-group pt-2 pb-5">
-        <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-ok"></span>Submit</button>
+       <div class="form-group pt-2">
+        <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-ok"></span>Update</button>
         
         <a href="{% url 'web:posts' %}" class="btn btn-primary">Cancel</a>
         
@@ -33,10 +34,6 @@
     </form>
 
 </div>
-
-
-
-
 
 
 
